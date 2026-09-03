@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>محمد مطاوع | Data Scientist</title>
+    <title>Mohamed Motawea | Data Scientist</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Fonts -->
@@ -131,6 +131,7 @@
         .hero-content {
             position: relative;
             z-index: 1;
+            width: 100%;
         }
 
         .avatar {
@@ -144,7 +145,7 @@
             font-size: 3.2rem;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 1.2rem;
+            margin: 0 auto 1.2rem;
             box-shadow: 0 0 40px var(--accent-glow);
             border: 3px solid var(--accent);
             user-select: none;
@@ -179,44 +180,14 @@
             margin: 0.5rem auto 1.2rem;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .social-links a {
-            color: var(--text-secondary);
-            font-size: 1.3rem;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: #fff;
-            background: var(--accent);
-            border-color: var(--accent);
-            transform: translateY(-4px) scale(1.05);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
         /* ============================================================
-                    STATS COUNTERS (JavaScript)
+                    STATS COUNTERS
                    ============================================================ */
         .stats-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
-            margin: 1.5rem 0 0;
+            margin: 1.5rem auto 0;
             width: 100%;
             max-width: 600px;
         }
@@ -247,6 +218,42 @@
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        /* ============================================================
+                    SOCIAL LINKS (تحت الإحصائيات)
+                   ============================================================ */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 1.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 8px 25px var(--accent-glow);
         }
 
         /* ============================================================
@@ -403,7 +410,6 @@
             font-size: 1rem;
         }
 
-        /* Highlight numbers like 8%, 10%, 11% */
         .exp-card .highlight {
             color: #facc15;
             font-weight: 700;
@@ -448,42 +454,6 @@
             color: var(--text-secondary);
             font-size: 0.75rem;
             display: block;
-        }
-
-        /* ============================================================
-                    EDUCATION
-                   ============================================================ */
-        .edu-box {
-            background: var(--bg-card);
-            padding: 1.2rem 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .edu-box h3 {
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        .edu-box .uni {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .edu-box .meta {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .edu-box .gpa {
-            display: inline-block;
-            background: var(--accent-glow);
-            color: var(--accent);
-            padding: 0.1rem 1rem;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            margin-top: 0.3rem;
         }
 
         /* ============================================================
@@ -547,28 +517,9 @@
             .stat-item .number {
                 font-size: 1.4rem;
             }
-        }
-
-        /* ============================================================
-                    TYPING EFFECT CURSOR (JavaScript)
-                   ============================================================ */
-        .typing-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.1em;
-            background: var(--accent);
-            margin-right: 4px;
-            vertical-align: text-bottom;
-            animation: blink 0.8s step-end infinite;
-        }
-
-        @keyframes blink {
-            0%,
-            100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0;
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.6rem;
             }
         }
     </style>
@@ -589,26 +540,23 @@
         <header class="hero">
             <div class="hero-content">
                 <div class="avatar">م</div>
-                <h1>محمد مطاوع</h1>
+                <h1>Mohamed Motawea</h1>
                 <div class="badge">
                     <i class="fas fa-brain"></i> Data Scientist &amp; Analyst
                 </div>
                 <p>
-                    <span id="typing-text"></span><span class="typing-cursor"></span>
-                </p>
-                <p style="font-size:0.95rem; color:var(--text-secondary); max-width:650px;">
                     شغوف بتحويل البيانات المعقدة إلى رؤى قابلة للتنفيذ، وبناء نماذج تعلم آلي
                     تدعم القرارات الاستراتيجية وتحسن الأداء التشغيلي.
                 </p>
 
-                <!-- Stats -->
+                <!-- ===== STATS ===== -->
                 <div class="stats-row">
                     <div class="stat-item">
                         <span class="number" data-count="4">0</span>
                         <span class="label">سنوات الخبرة</span>
                     </div>
                     <div class="stat-item">
-                        <span class="number" data-count="7">0</span>
+                        <span class="number" data-count="8">0</span>
                         <span class="label">شهادات احترافية</span>
                     </div>
                     <div class="stat-item">
@@ -621,6 +569,7 @@
                     </div>
                 </div>
 
+                <!-- ===== SOCIAL LINKS (تحت الإحصائيات) ===== -->
                 <div class="social-links">
                     <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -811,21 +760,6 @@
             </div>
         </section>
 
-        <!-- ===== EDUCATION ===== -->
-        <section class="section">
-            <h2 class="section-title"><i class="fas fa-university"></i> التعليم</h2>
-            <div class="edu-box">
-                <h3>بكالوريوس علوم الحاسب</h3>
-                <span class="uni"><i class="fas fa-school"></i> University of the People</span>
-                <span class="meta"> · تخرج أبريل 2024</span>
-                <div class="gpa"><i class="fas fa-star"></i> 3.43 GPA</div>
-                <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.5rem;">
-                    <i class="fas fa-trophy" style="color:var(--accent);"></i>
-                    مدرج في قائمة رئيس الجامعة للسنتين الأولى والثانية، وقائمة الشرف للثالثة والرابعة.
-                </p>
-            </div>
-        </section>
-
         <!-- ===== FOOTER ===== -->
         <footer class="footer">
             <p>
@@ -833,7 +767,7 @@
                 مستضاف على <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
             </p>
             <p style="margin-top:0.3rem; font-size:0.8rem;">
-                &copy; 2026 محمد مطاوع · جميع الحقوق محفوظة
+                &copy; 2026 Mohamed Motawea · جميع الحقوق محفوظة
             </p>
         </footer>
 
@@ -922,27 +856,7 @@
         })();
 
         // ============================================================
-        // 2. TYPING EFFECT
-        // ============================================================
-        (function typing() {
-            const text =
-                'محلل بيانات و عالم بيانات بخبرة 4 سنوات في تحويل بيانات الأعمال إلى حلول ذكاء اصطناعي فعالة.';
-            const el = document.getElementById('typing-text');
-            let index = 0;
-
-            function type() {
-                if (index < text.length) {
-                    el.textContent += text.charAt(index);
-                    index++;
-                    setTimeout(type, 40 + Math.random() * 30);
-                }
-            }
-            // Start after a small delay
-            setTimeout(type, 600);
-        })();
-
-        // ============================================================
-        // 3. COUNTER ANIMATION (Stats)
+        // 2. COUNTER ANIMATION (Stats)
         // ============================================================
         (function counters() {
             const counters = document.querySelectorAll('.stat-item .number');
@@ -960,7 +874,6 @@
                     function update(currentTime) {
                         const elapsed = currentTime - startTime;
                         const progress = Math.min(elapsed / duration, 1);
-                        // Ease out cubic
                         const eased = 1 - Math.pow(1 - progress, 3);
                         const current = Math.floor(eased * target);
                         counter.textContent = current.toLocaleString();
@@ -974,16 +887,11 @@
                 });
             }
 
-            // Trigger when hero is visible (simple approach: after page load)
             window.addEventListener('load', () => {
-                setTimeout(animateCounters, 800);
+                setTimeout(animateCounters, 600);
             });
+        })();
+    </script>
 
-            // Also trigger on scroll if not triggered yet (for safety)
-            let hasTriggered = false;
-            window.addEventListener('scroll', () => {
-                if (!hasTriggered) {
-                    const hero = document.querySelector('.hero');
-                    const rect = hero.getBoundingClientRect();
-                    if (rect.top < window.innerHeight) {
-                        has
+</body>
+</html>
